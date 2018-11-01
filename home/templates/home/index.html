@@ -22,6 +22,149 @@
     <!--<link href="http://realinvest.demo/css/vendor.css" rel="stylesheet" />-->
     <link href="http://realinvest.demo/css/main.css" rel="stylesheet" />
     <style>
+    <!--Road map-->
+
+    .roadmap{
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      transition: all 1s ease;
+    }
+    .roadmap{
+        background: url('http://extrawall.net/images/wallpapers/378_1920x1080_abstract_city.jpg') no-repeat fixed center;
+        background-size: cover no-repeat fixed center;
+        height: 614px;
+    }
+
+    .roadmap::before{
+      content: '';
+      background: rgba(0,0,0,0.2);
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .roadmap .focus_title{
+        background-color: #EAEAEA;
+    }
+    .structure{
+        position: absolute;
+        width: 78.9%;
+        overflow: hidden;
+    }
+
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .timeline{
+      position: relative;
+      bottom: 0;
+      margin-top: 37.4%;
+      width: 168%;
+      height: 0px;
+      background: rgba(0,0,0,0.5);
+      border-top: 0px solid #fff;
+      padding-left: 0%;
+
+    }
+
+    .date{
+      color: #fff;
+      float: left;
+      width: 150px;
+      height: 50px;
+    }
+    .date::before{
+      content: '';
+      position: absolute;
+      height: 100vh;
+      width: 1px;
+      background: rgba(255,255,255,0.7);
+      background: -webkit-linear-gradient(top,rgba(0,0,0,0.5),rgba(0,0,0,1)); /*Safari 5.1-6*/
+      background: -o-linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,1)); /*Opera 11.1-12*/
+      background: -moz-linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,1)); /*Fx 3.6-15*/
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(255,255,255,1)); /*Standard*/
+      margin-top: -100vh;
+    }
+    p.focus_yr{
+      position: absolute;
+      top: 0;
+      margin-left: -14px;
+      padding-top: 10px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    p.focus_yr::before{
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: -10px;
+      left: 3.5px;
+    }
+
+    p.focus_yr::after{
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      top: -5px;
+      left: 9px;
+    }
+
+    .goal_wrap{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #fff;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 50px;
+      top:-100px;
+      margin-left: -24px;
+      font-size: 24px;
+      transition: all 0.5s ease;
+    }
+
+    .goal_wrap:hover{
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin-left: -30px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .goal_wrap.active{
+      top: -160px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      margin-left: -40px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    .bounce {
+      animation: bounce 1s .5s;
+      transform: scale(0.85);
+    }
+
+    @keyframes bounce {
+      0% { transform: scale(0.85); opacity: 1; }
+      50% { transform: scale(0.95); opacity: .7; }
+      60% { transform: scale(0.6); opacity: 1; }
+      80% { transform: scale(1.6) }
+      100% { transform: scale(1.1) }
+    }
+
+    <!--Road map-->
+
       .carousel{
         margin-bottom: auto;
       }
@@ -66,6 +209,7 @@
         border-radius: 0px !important;
         height: 4rem !important;
         border: solid 2px !important;
+        text-align: center !important;
       }
       #mc-form input[type="submit"]{
         background-color: transparent !important;
@@ -78,15 +222,27 @@
         padding 0rem !important;
         line-height: 4.0rem !important;
       }
+      #mc-form_footer input[type="text"], input[type="email"]{
+        border-radius: 0px !important;
+        height: 4rem !important;
+        border: solid 2px !important;
+        color: 1f3b42;
+        width: 380px;
+        text-align: center !important;
+        padding-bottom: 12px;
+        margin-bottom: 10px;
+
+      }
       .carousel-item , .active{
         background-color: #eaeaea !important;
       }
+
       .carousel-heading, .carousel-text{
         color: #444444;
       }
       .carousel-indicators{
         position: relative;
-        bottom: -105px;
+        bottom: -190px;
       }
       .carousel-indicators li {
         border-radius: 12px;
@@ -98,12 +254,19 @@
      .carousel-indicators .active{
         background-color: red !important;
      }
+     .carousel-caption .text-left{
+        top: 37%;
+     }
+     .carousel-inner .container{
+        margin-top: 25%;
+        position: relative;
+     }
       .top_items{
         position: relative;
         margin-left: 42%;
         border: 1px solid;
         width: 17%;
-        height: 18%;
+        height: 39%;
      }
      .fa{
         font-size: 43px;
@@ -111,6 +274,15 @@
      .btn{
         background-color: transparent;
         border: transparent;
+     }
+     .col-lg-4{
+        color: #eaeaea;
+     }
+     .partners_r .rounded-circle{
+        border-radius: 0px !important;
+     }
+     .carousel-text{
+        padding: 16px;
      }
 
       @media screen and (max-width: 531px) {
@@ -142,6 +314,32 @@
          .vertical-row{
             height: 0px;
          }
+         .date{
+            width: 61px;
+         }
+         .structure{
+            width: 100%;
+         }
+         .timeline{
+            padding-left: 8%;
+         }
+         .roadmap{
+            height: 306px;
+         }
+         .title_text{
+            text-align:center;
+            padding-top: 27px;
+         }
+         .home_right{
+            margin-left:0px !important;
+         }
+         .home_left{
+            margin-right:0px !important;
+         }
+         .carousel-inner .container{
+            margin-top: -10%;
+         }
+
     }
 
      @media screen and (min-width: 532px) and (max-width: 1024px) {
@@ -165,6 +363,15 @@
         .navbar-brand{
             margin-left: 4px;
         }
+        .roadmap{
+            height: 474px;
+         }
+         .structure{
+            width: 100%;
+         }
+         .date{
+            width: 82px;
+         }
     }
     </style>
     <!--New css-->
@@ -298,7 +505,7 @@
           </div>
         </div>
       <div id="solution" class="container solution">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom:0px;bottom: 43px;">
           <div class="row carosel_title">
             <h2>Why we exist?</h2>
           </div>
@@ -314,7 +521,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
             <div class="top_items">1</div>
-              <div>
+              <div class="container">
                 <div class="carousel-caption text-left">
                   <div class="carousel_line">
                     <div class="carousel-heading">
@@ -469,10 +676,10 @@
         {% for groups in core_team %}
         <div class="row team_row">
           {% for person in groups %}
-          <div class="col-lg-4">
+          <div class="col-lg-4 partners_r">
             <img class="rounded-circle" src="{{MEDIA_URL}}/{{person.photo}}" alt="Generic placeholder image" width="140" height="140">
             <h2>{{ person.full_name }}</h2>
-            <p>{{ person.title }}</p>
+            <!--<p>{{ person.title }}</p>-->
             <p><a class="btn" href="{{ person.linkedin }}" role="button"><i class="fa fa-linkedin-square" style="color:white" aria-hidden="true"></i></a></p>
           </div><!-- /.col-lg-4 -->
           {% endfor %}
@@ -483,7 +690,134 @@
           <div class="row focus_title">
             <h2>Roadmap</h2>
           </div>
+        <div class="row roadmap_row">
+            <!--Road Map-->
 
+          <div class="structure">
+
+            <div class="preloaderimg">
+              <img src="https://wallpaperscraft.com/image/tropics_sea_palm_trees_vacation_84858_2412x1810.jpg" alt="" style="display: none;" />
+              <img src="http://extrawall.net/images/wallpapers/378_1920x1080_abstract_city.jpg" alt="" style="display: none;" />
+              <img src="http://www.churchmilitant.com/images/uploads/2015-06-12-niles-x.jpg" alt="" style="display: none;"/>
+            </div>
+            <!--<div class="timeline"></div>-->
+            <div class="timeline">
+                <div  class='date date-0'>
+                  <div class="goal_wrap goal_real_estate goal_real_estate_2017" >
+                   <i class="fa fa-building" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_involve goal_involve_2017" >
+                   <i class="fa fa-chart-line" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_retirement goal_retirement_2017" >
+                   <i class="fa fa-business-time" aria-hidden="true"></i>
+                 </div>
+                <p class="focus_yr">
+                  <a href="javascript:void(0);">2017</a>
+                  <br>
+                </p>
+              </div>
+
+               <div  class='date date-1'>
+                  <div class="goal_wrap goal_real_estate goal_real_estate_2018" >
+                   <i class="fa fa-building" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_involve goal_involve_2018" >
+                   <i class="fa fa-chart-line" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_retirement goal_retirement_2018" >
+                   <i class="fa fa-business-time" aria-hidden="true"></i>
+                 </div>
+                <p class="focus_yr">
+                  <a href="javascript:void(0);">2018</a>
+                  <br>
+                </p>
+              </div>
+
+                <div  class='date date-2'>
+                  <div class="goal_wrap goal_real_estate goal_real_estate_2019" >
+                   <i class="fa fa-building" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_involve goal_involve_2019" >
+                   <i class="fa fa-chart-line" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_retirement goal_retirement_2019" >
+                   <i class="fa fa-business-time" aria-hidden="true"></i>
+                 </div>
+                <p class="focus_yr">
+                  <a href="javascript:void(0);">2019</a>
+                  <br>
+                </p>
+              </div>
+
+                <div  class='date date-3'>
+                  <div class="goal_wrap goal_real_estate goal_real_estate_2020" >
+                   <i class="fa fa-building" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_involve goal_involve_2020" >
+                   <i class="fa fa-chart-line" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_retirement goal_retirement_2020" >
+                   <i class="fa fa-business-time" aria-hidden="true"></i>
+                 </div>
+                <p class="focus_yr">
+                  <a href="javascript:void(0);">2020</a>
+                  <br>
+                </p>
+              </div>
+
+                <div  class='date date-4'>
+                  <div class="goal_wrap goal_real_estate goal_real_estate_2021" >
+                   <i class="fa fa-building" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_involve goal_involve_2021" >
+                   <i class="fa fa-chart-line" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_retirement goal_retirement_2021" >
+                   <i class="fa fa-business-time" aria-hidden="true"></i>
+                 </div>
+                <p class="focus_yr">
+                  <a href="javascript:void(0);">2021</a>
+                  <br>
+                </p>
+              </div>
+
+                <div  class='date date-5'>
+                  <div class="goal_wrap goal_real_estate goal_real_estate_2022" >
+                   <i class="fa fa-building" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_involve goal_involve_2022" >
+                   <i class="fa fa-chart-line" aria-hidden="true"></i>
+                 </div>
+                  <div class="goal_wrap goal_retirement goal_retirement_2022" >
+                   <i class="fa fa-business-time" aria-hidden="true"></i>
+                 </div>
+                <p class="focus_yr">
+                  <a href="javascript:void(0);">2022</a>
+                  <br>
+                </p>
+              </div>
+
+            </div>
+
+              <!--<div class="timeline"></div>-->
+
+              <!--<div class="container">-->
+                <!--<div class="row">-->
+                  <!--<div class="col-md-12 text-center">-->
+                    <!--<h1>Title</h1>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            </div>
+
+
+
+
+
+
+              <!--Road Map-->
+        </div>
         </div> 
         <!-- Marketing messaging and featurettes
         ================================================== -->
@@ -508,11 +842,11 @@
       </div><!-- /.container -->
       <!-- FOOTER -->
       <div class="container footer">
-        <div class="row title_text">
+        <div class="row title_text" style="padding-top:0px;">
             <h2>THE KEY TO YOUR FUTURE</h2>
           </div>
-          <div class="row home_content">
-            <div class="home_left">
+          <div class="row home_content" style="justify-content:center;display:flex;">
+            <div class="home_left" style="float:left;max-width:500px; margin-right: 20px;">
               <p class="home_p">
                   REALinvest - A revolutionary online real estate
                   marketplace providing a secure, global and transparent
@@ -521,12 +855,115 @@
                   development crowdfunding and online property auctions
               </p>
             </div>
-            <div class="home_right">
-  
+              <div class="vertical-row" style="background-color:#1f3b42;"></div>
+            <div class="home_right" style="float:right; margin-left: 20px;">
+                <!--Subscribe form-->
+
+            <div class="top_subscribe">
+            <div class="top_subscribe_form footer-subscribe">
+                <h4 class="subscribe_h4" id="subscribe_msg" style="color:#1f3b42;">Like to be the first? </br>subscribe to know more about us</h4>
+                <div id="subscribe_close_wrap"></div>
+                <div class="subscribe-form" id="subscribe-form">
+                    <form class="group" id="mc-form_footer" novalidate="true">
+                        <div data-drip-attribute="description"></div>
+                        <div>
+                            <input class="fname" id="drip-fname" name="fname" placeholder="Full Name" required="" type="text" value="" />
+                            <input class="email" id="drip-email" name="email"  placeholder="Email Address" required="" type="email" value=""  />
+                        </div>
+                        <div>
+                            <input name="submit" type="submit" value="Yes I want to know more" />
+
+                        </div>
+                        <div></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+           <!--Subscribe form-->
             </div>
       </div>
     </main>
   </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
 
-    
+    <script>
+        $(document).ready(function(e) {
+          var dts = [
+            '2018','2020','2022'
+          ];
+          $(".goal_real_estate").hide();
+          $(".goal_retirement").hide();
+          $(".goal_involve").hide();
+          $.each(dts, function(index, item) {
+              if(item == '2018'){
+                  $(".goal_real_estate_2018").show();
+              }
+              else if(item == '2020'){
+                  $(".goal_retirement_2020").show();
+              }
+              else if(item == '2022'){
+                  $(".goal_involve_2022").show();
+              }
+          });
+
+          var viewport =Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+          console.log(viewport);
+
+
+          $('a').click(function(e){
+            e.preventDefault()
+          })
+
+          $('.goal_wrap').click(function(){
+            var diff = $(this).parent()[0].offsetLeft;
+            $('.date .goal_wrap').removeClass('active bounce');
+            $(this).addClass('active bounce');
+            console.log(diff);
+            console.log((viewport - diff));
+        TweenLite.to($('.date').parent(), 1, {x:((viewport*0.25) - diff), onComplete:function(){
+                console.log('success');
+                /*TweenLite.to($('.timeline'), 1, {top:"50%"});*/
+              }});
+          });
+
+          $('.goal_real_estate').click(function(){
+            console.log('goal click');
+        $('.roadmap').fadeTo('ease', 0.3, function()
+        {
+            $(this).css('background-image', 'url(http://extrawall.net/images/wallpapers/378_1920x1080_abstract_city.jpg)');
+        }).fadeTo('slow', 1);
+
+          });
+
+        $('.goal_retirement').click(function(){
+            console.log('goal click');
+        $('.roadmap').fadeTo('ease', 0.3, function()
+        {
+            $(this).css('background-image', 'url(https://wallpaperscraft.com/image/tropics_sea_palm_trees_vacation_84858_2412x1810.jpg)');
+        }).fadeTo('slow', 1);
+
+          });
+
+        $('.goal_involve').click(function(){
+            console.log('goal click');
+        $('.roadmap').fadeTo('ease', 0.3, function()
+        {
+            $(this).css('background-image', 'url(http://www.churchmilitant.com/images/uploads/2015-06-12-niles-x.jpg)');
+        }).fadeTo('slow', 1);
+
+          });
+
+          $('.focus_yr').click(function(){
+            var diff = $(this).parent()[0].offsetLeft;
+            TweenLite.to($('.date').parent(), 1, {x:((viewport*0.25) - diff), onComplete:function(){
+                console.log('back');
+              }});
+          });
+
+
+        });
+    </script>
+
 </html>
